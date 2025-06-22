@@ -153,6 +153,10 @@ This is a scalable email queue implementation in Go, utilizing Redis for queue m
 git clone https://github.com/sarthakyeole/redis-go-mailing-bulk.git
 
 # Set required environment variables
+Copy .env.example to .env and configure the variables
+
+# Install dependencies
+Run go mod download to install dependencies
 
 # Run the application
 go run ./cmd/server/main.go
