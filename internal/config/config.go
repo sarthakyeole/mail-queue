@@ -42,9 +42,9 @@ func LoadConfiguration() *ApplicationConfig {
 		// Email SMTP Configuration
 		EmailSMTPServer:        getEnvironmentVariable("EMAIL_SMTP_SERVER", "smtp.gmail.com"),
 		EmailSMTPServerPort:    smtpServerPort,
-		EmailSMTPUsername:      getEnvironmentVariable("EMAIL_SMTP_USERNAME", "recipient@gmail.com"),
-		EmailSMTPPassword:      getEnvironmentVariable("EMAIL_SMTP_PASSWORD", "password"),
-		EmailSenderAddress:     getEnvironmentVariable("EMAIL_SENDER_ADDRESS", "recipient@gmail.com"),
+		EmailSMTPUsername:      getEnvironmentVariable("EMAIL_SMTP_USERNAME", "sarthakyeole25@gmail.com"),
+		EmailSMTPPassword:      getEnvironmentVariable("EMAIL_SMTP_PASSWORD", "owtu kivm oidv pqdm"),
+		EmailSenderAddress:     getEnvironmentVariable("EMAIL_SENDER_ADDRESS", "sarthakyeole25@gmail.com"),
 		EmailSenderDisplayName: getEnvironmentVariable("EMAIL_SENDER_NAME", "Sarthak"),
 	}
 }

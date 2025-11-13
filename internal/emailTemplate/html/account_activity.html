@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Account Activity — {{.user_name}}</title>
+  <style>
+    body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background:#f5f7fa; margin:0; padding:20px;}
+    .card {max-width:620px; margin:30px auto; background:#fff; border-radius:10px; box-shadow:0 6px 24px rgba(20,20,30,0.06); overflow:hidden;}
+    .head {background:#0b66ff; color:#fff; padding:18px 24px; text-align:center;}
+    .head h1 {margin:0; font-size:18px;}
+    .body {padding:22px; color:#222; line-height:1.6; font-size:15px;}
+    .meta {background:#f0f6ff; border-left:4px solid #0b66ff; padding:12px; border-radius:6px; margin:16px 0;}
+    .button {display:inline-block; padding:11px 20px; background:#0b66ff; color:#fff; text-decoration:none; border-radius:7px; font-weight:500;}
+    .footer {padding:16px 22px; font-size:13px; color:#7a7a86; text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <h1>We noticed activity on your account</h1>
+    </div>
+
+    <div class="body">
+      <p>Hi {{.user_name}},</p>
+
+      <p>We saw a <strong>{{.activity_type}}</strong> on your account just now. Here are the details:</p>
+
+      <div class="meta">
+        <p><strong>When:</strong> {{.timestamp}}<br>
+        <strong>Device / IP:</strong> {{.device_info}}<br>
+        <strong>Location:</strong> {{.location}}</p>
+      </div>
+
+      <p>If this was you, you can ignore this message. If you don’t recognize this activity, please secure your account immediately.</p>
+
+      <p style="text-align:center; margin-top:18px;">
+        <a href="{{.security_link}}" class="button">Secure my account</a>
+      </p>
+
+      <p style="margin-top:18px">Thanks,<br>The Security Team</p>
+    </div>
+
+    <div class="footer">
+      This message was sent to {{.user_email}} • If you need help, visit the support center.
+    </div>
+  </div>
+</body>
+</html>

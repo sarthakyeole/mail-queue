@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome, {{.user_name}}!</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      max-width: 630px;
+      margin: 35px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      background: #0b65ff;
+      padding: 28px 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content {
+      padding: 26px 28px;
+      color: #222;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .content p {
+      margin: 14px 0;
+    }
+
+    .highlight-box {
+      background: #f0f5ff;
+      border-left: 4px solid #0b65ff;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #0b65ff;
+      color: #fff;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+
+    .footer {
+      padding: 18px;
+      text-align: center;
+      font-size: 12px;
+      color: #7d7d85;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>Welcome to BulkMail!</h1>
+    </div>
+
+    <div class="content">
+      <p>Hi,</p>
+
+      <p>We’re really glad to have you on board. Your account has been created successfully, and you’re all set to explore what {{.app_name}} has to offer.</p>
+
+      <div class="highlight-box">
+        <p><strong>Your Details:</strong><br>
+        Email: {{.user_email}}<br>
+        Joined On: {{.joined_at}}</p>
+      </div>
+
+      <p>To help you get started, we’ve prepared a quick overview of the main things you can try right away. If you ever get stuck, we’re always here to help.</p>
+
+      <div class="center">
+        <a href="{{.getting_started_link}}" class="cta-button">Get Started</a>
+      </div>
+
+      <p>If you have questions at any point, feel free to reach out. We’ll be happy to assist.</p>
+
+      <p>Welcome again,<br>The BulkMail Team</p>
+    </div>
+
+    <div class="footer">
+      This email was sent to {{.user_email}}. If you didn’t create this account, you can safely ignore this message.
+    </div>
+  </div>
+</body>
+</html>
